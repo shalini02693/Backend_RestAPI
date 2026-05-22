@@ -1,28 +1,67 @@
-# Scalable REST API
+# Scalable REST API with Authentication & RBAC
 
-## Features
+A scalable full-stack application built with:
+
+- Node.js
+- Express.js
+- PostgreSQL
+- Prisma ORM
 - JWT Authentication
-- RBAC
-- CRUD APIs
-- Swagger Docs
-- PostgreSQL + Prisma
-- React Frontend
+- Role-Based Access Control
+- React.js Frontend
+- Swagger API Documentation
+- Docker Support
 
-## Setup
+---
 
-### Backend
+# Features
 
-cd backend
-npm install
-npx prisma migrate dev
-npm run dev
+## Backend
+- User Registration & Login
+- Password Hashing using bcrypt
+- JWT Authentication
+- Role-Based Authorization (Admin/User)
+- CRUD APIs for Tasks
+- API Validation
+- Global Error Handling
+- Swagger Documentation
+- Prisma ORM + PostgreSQL
+- Scalable Folder Structure
+- Dockerized Setup
 
-### Frontend
+## Frontend
+- Register/Login UI
+- Protected Dashboard
+- Task CRUD Operations
+- API Integration using Axios
+- External CSS Styling
+- Error & Success Handling
 
-cd frontend
-npm install
-npm run dev
+---
 
-## Swagger
+# Tech Stack
 
-http://localhost:5000/api-docs
+## Backend
+- Node.js
+- Express.js
+- Prisma ORM
+- PostgreSQL
+- JWT
+- Swagger
+
+## Frontend
+- React.js
+- Vite
+- React Router DOM
+- Axios
+
+---
+
+# Project Structure
+
+```bash
+project-root/
+│
+├── backend/
+├── frontend/
+└── docker-compose.yml
