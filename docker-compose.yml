@@ -1,0 +1,62 @@
+version: '3.9'
+
+services:
+
+  postgres:
+    image: postgres:16
+    container_name: scalable_postgres
+
+    restart: always
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: scalable_api
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+
+    container_name: scalable_backend
+
+    restart: always
+
+    ports:
+      - "5000:5000"
+
+    depends_on:
+      - postgres
+
+    environment:
+      PORT: 5000
+      DATABASE_URL: postgresql://postgres:password@postgres:5432/scalable_api
+      JWT_SECRET: mySuperSecretKey
+
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  frontend:
+    build: ./frontend
+
+    container_name: scalable_frontend
+
+    restart: always
+
+    ports:
+      - "5173:5173"
+
+    depends_on:
+      - backend
+
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+
+volumes:
+  postgres_data:

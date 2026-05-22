@@ -1,0 +1,86 @@
+.dashboard-container {
+  padding: 40px;
+}
+
+.dashboard-title {
+  margin-bottom: 20px;
+}
+
+.dashboard-input,
+.dashboard-textarea {
+  width: 300px;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.dashboard-button {
+  padding: 12px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #16a34a;
+  color: white;
+  cursor: pointer;
+}
+
+.dashboard-button:hover {
+  background: #15803d;
+}
+
+.task-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.task-delete-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.task-delete-btn:hover {
+  background: #b91c1c;
+}
+
+/* .nav-button {
+  padding: 12px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #1639a3;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background: #391580;
+} */
+
+.navbar {
+display: flex;
+justify-content: flex-end;
+}
+
+.nav-button {
+padding: 12px 20px;
+border: none;
+border-radius: 8px;
+background: #2972e0;
+color: white;
+cursor: pointer;
+font-weight: 600;
+transition: 0.3s ease;
+}
+
+.nav-button:hover {
+background: #490bc6;
+}
