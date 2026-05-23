@@ -84,26 +84,6 @@ router.post(
  *         required: true
  *         schema:
  *           type: integer
- *     responses:
- *       200:
- *         description: Task updated successfully
- */
-router.put('/:id', taskController.updateTask);
-
-/**
- * @swagger
- * /api/v1/tasks/{id}:
- *   put:
- *     summary: Update task
- *     tags: [Tasks]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: integer
  *     requestBody:
  *       required: true
  *       content:
@@ -118,6 +98,26 @@ router.put('/:id', taskController.updateTask);
  *     responses:
  *       200:
  *         description: Task updated successfully
+ */
+router.put('/:id', taskController.updateTask);
+
+/**
+ * @swagger
+ * /api/v1/tasks/{id}:
+ *   delete:
+ *     summary: Delete task (Admin only)
+ *     tags: [Tasks]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: Task deleted successfully
  */
 router.delete(
   '/:id',
